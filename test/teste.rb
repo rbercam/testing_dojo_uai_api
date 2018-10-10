@@ -2,15 +2,15 @@ require 'httparty'
 require 'faker'
 
 body = {
-    "name": Faker::Name.first_name,
-    "last-name": Faker::Name.middle_name,
-    "email": Faker::Internet.email,
-    "age": Faker::Number.between(18, 50),
-    "phone": Faker::PhoneNumber.phone_number,
-    "address": Faker::Address.street_name,
-    "state": Faker::Address.state,
-    "city": Faker::Address.city
-  }
+        "name": Faker::Name.first_name,
+        "last-name": Faker::Name.middle_name,
+        "email": Faker::Internet.email,
+        "age": Faker::Number.between(18, 50),
+        "phone": Faker::PhoneNumber.phone_number,
+        "address": Faker::Address.street_name,
+        "state": Faker::Address.state,
+        "city": Faker::Address.city
+        }
   @body = JSON.generate(body)
 
 response = HTTParty.post('http://api-de-tarefas.herokuapp.com/contacts/',{:headers => {

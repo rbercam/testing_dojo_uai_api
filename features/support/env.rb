@@ -3,6 +3,8 @@ require 'httparty'
 require 'httparty/request'
 require 'httparty/response/headers'
 require 'rspec'
+require 'date_format'
+require 'faker'
 
 ENVIRONMENT = ENV['ENVIRONMENT']
 
