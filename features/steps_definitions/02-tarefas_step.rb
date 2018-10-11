@@ -1,10 +1,11 @@
 Dado("que o cliente esteja logado na API") do
     puts $payload = @login.post_login
     $token = $payload['data']['attributes']['auth-token']
+    @tarefa = Tarefa.new(@body, $token)
 end
 
 Quando("realizar a requisição para cadastrar uma nova tarefa") do
-   $payload = @tarefa.post_task($token,@body)
+   $payload = @tarefa.post_task(@body)
    $id = $payload["data"]["id"]
 end
 
@@ -13,5 +14,10 @@ Então("o corpo da resposta da tarefa") do
 end
 
 Quando("realizar a requisição para consultar tarefas") do
-    $payload = @tarefa.get_task($token, $id)
+    $payload = @tarefa.get_task($id)
+end
+
+Então("ao final o cliente irá deslogar da API") do
+    $payload = @login.delete_logout($token)
+    puts expect($payload.code).to eq(204)
 end

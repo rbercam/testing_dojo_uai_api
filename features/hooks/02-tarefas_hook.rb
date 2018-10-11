@@ -13,5 +13,4 @@ Before '@tarefas' do
     }
     @body = JSON.generate(body)
 
-    @tarefa = Tarefa.new(@headers, @body)
 end
