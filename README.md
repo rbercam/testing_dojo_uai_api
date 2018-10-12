@@ -1,36 +1,19 @@
-## Getting Started ##
 
-### Installing gems ###
-To install gems type:
+### CircleCI ###
+[![CircleCI](https://circleci.com/gh/rbercam/testing_dojo_uai_api.svg?style=svg)](https://circleci.com/gh/rbercam/testing_dojo_uai_api)
+
+# 5º Testing Dojo UAI #
+## Automação API com HTTParty com Integração contínua CircleCI ##
+
+
+### Instalando dependências ###
+Para instalação das dependências do projeto rode o comando:
 ```shell
 bundle install
 ```
 
-### Run tests in DEV###
-Type this in the tests folder:
+### Executando Projeto ###
+Na pasta raiz do projeto rode o comando:
 ```shell
-bundle exec cucumber
-```
-### Run tests in HMG ###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p json -p hmg
-```
-
-### HTML Report###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p html -p hmg
-```
-
-### Json Report###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p json -p hmg
-```
-
-### Run with tags###
-Type this in the tests folder:
-```shell
-bundle exec cucumber --tags @run
+cucumber
 ```
