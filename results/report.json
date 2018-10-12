@@ -33,7 +33,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66935
+              "duration": 83760
             }
           }
         ],
@@ -43,14 +43,14 @@
             "name": "realizar a requisição para logar na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"dJLg3azPDjFtx-TqbwuV\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-11T13:43:48.749Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"1-Yo9zZsrYyDkzhcEtSo\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-12T11:25:25.477Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 1052818622
+              "duration": 987550692
             }
           },
           {
@@ -65,7 +65,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1958860
+              "duration": 1365675
             }
           },
           {
@@ -80,7 +80,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2699858
+              "duration": 2253713
             }
           }
         ]
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81214
+              "duration": 79777
             }
           }
         ],
@@ -115,14 +115,14 @@
             "name": "realizar a requisição para fazer logout na API",
             "line": 11,
             "output": [
-              "#<HTTParty::Response:0x55ce62c3f380 parsed_response=nil, @response=#<Net::HTTPNoContent 204 No Content readbody=true>, @headers={\"server\"=>[\"Cowboy\"], \"date\"=>[\"Thu, 11 Oct 2018 13:43:49 GMT\"], \"content-length\"=>[\"0\"], \"connection\"=>[\"close\"], \"cache-control\"=>[\"no-cache\"], \"x-request-id\"=>[\"4f3b4005-9ccf-4d83-a788-a96202881360\"], \"x-runtime\"=>[\"0.012516\"], \"via\"=>[\"1.1 vegur\"]}>"
+              "#<HTTParty::Response:0x557ab090c1f0 parsed_response=nil, @response=#<Net::HTTPNoContent 204 No Content readbody=true>, @headers={\"server\"=>[\"Cowboy\"], \"date\"=>[\"Fri, 12 Oct 2018 11:25:25 GMT\"], \"content-length\"=>[\"0\"], \"connection\"=>[\"close\"], \"cache-control\"=>[\"no-cache\"], \"x-request-id\"=>[\"3e451085-3757-4a44-aabc-a15674609cdc\"], \"x-runtime\"=>[\"0.020349\"], \"via\"=>[\"1.1 vegur\"]}>"
             ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:14"
             },
             "result": {
               "status": "passed",
-              "duration": 675436763
+              "duration": 765425591
             }
           },
           {
@@ -137,7 +137,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 232128
+              "duration": 152281
             }
           }
         ]
@@ -175,7 +175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84083
+              "duration": 73947
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231589
+              "duration": 221207
             }
           }
         ],
@@ -194,14 +194,15 @@
             "name": "que o cliente esteja logado na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"8Rk4yJeeXmyiKJyaL4FM\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-11T13:43:50.300Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"uxv2Z1N186J3fRuezxyG\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-12T11:25:27.283Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:1"
             },
             "result": {
-              "status": "passed",
-              "duration": 854357923
+              "status": "failed",
+              "error_message": "#/data/id: failed schema #/properties/data/properties/id: For 'properties/id', \"25\" is not a number.\n\n---\n\nexpected\n\n{\n  \"data\": {\n    \"id\": \"25\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"rbercamapi@gmail.com\",\n      \"auth-token\": \"uxv2Z1N186J3fRuezxyG\",\n      \"created-at\": \"2018-10-06T01:31:58.010Z\",\n      \"updated-at\": \"2018-10-12T11:25:27.283Z\"\n    }\n  }\n}\n\nto match schema \"login_service_schema\":\n\n{\n  \"description\": \"schema response login\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"type\": {\n          \"type\": \"string\"\n        },\n        \"attributes\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"email\": {\n              \"type\": \"string\"\n            },\n            \"auth-token\": {\n              \"type\": \"string\"\n            },\n            \"created-at\": {\n              \"type\": \"string\"\n            },\n            \"updated-at\": {\n              \"type\": \"string\"\n            }\n          }\n        }\n      }\n    }\n  }\n}\n (RSpec::Expectations::ExpectationNotMetError)\n./features/steps_definitions/02-tarefas_step.rb:3:in `\"que o cliente esteja logado na API\"'\nfeatures/specifications/02-tarefas.feature:6:in `Dado que o cliente esteja logado na API'",
+              "duration": 1143153052
             }
           }
         ]
@@ -229,56 +230,43 @@
             "name": "realizar a requisição para cadastrar uma nova tarefa",
             "line": 9,
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:7"
+              "location": "features/steps_definitions/02-tarefas_step.rb:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 688235219
+              "status": "skipped"
             }
           },
           {
             "keyword": "Então ",
             "name": "o sistema retorna o código 201",
             "line": 10,
-            "output": [
-              "true"
-            ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:6"
             },
             "result": {
-              "status": "passed",
-              "duration": 209182
+              "status": "skipped"
             }
           },
           {
             "keyword": "E ",
             "name": "o corpo da resposta da tarefa",
             "line": 11,
-            "output": [
-              "{\"data\":{\"id\":\"68\",\"type\":\"tasks\",\"attributes\":{\"title\":\"wnxgy7m\",\"description\":\"g4vfsmvhw1gq4bi\",\"done\":true,\"deadline\":\"0010-11-18T10:43:49.000Z\",\"user-id\":25,\"created-at\":\"2018-10-11T13:43:50.989Z\",\"updated-at\":\"2018-10-11T13:43:50.989Z\",\"short-description\":\"g4vfsmvhw1gq4bi\",\"is-late\":true},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
-            ],
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:12"
+              "location": "features/steps_definitions/02-tarefas_step.rb:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 107224
+              "status": "skipped"
             }
           },
           {
             "keyword": "E ",
             "name": "ao final o cliente irá deslogar da API",
             "line": 12,
-            "output": [
-              "true"
-            ],
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:20"
+              "location": "features/steps_definitions/02-tarefas_step.rb:21"
             },
             "result": {
-              "status": "passed",
-              "duration": 698646084
+              "status": "skipped"
             }
           }
         ]
@@ -296,7 +284,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82063
+              "duration": 88718
             }
           },
           {
@@ -305,7 +293,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 277669
+              "duration": 241126
             }
           }
         ],
@@ -315,14 +303,15 @@
             "name": "que o cliente esteja logado na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"wP-t1yGoPnkfcoz-ixdM\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-11T13:43:52.547Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"xTF8fnMDVJZYv1y-zMCQ\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-12T11:25:28.411Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:1"
             },
             "result": {
-              "status": "passed",
-              "duration": 861637915
+              "status": "failed",
+              "error_message": "#/data/id: failed schema #/properties/data/properties/id: For 'properties/id', \"25\" is not a number.\n\n---\n\nexpected\n\n{\n  \"data\": {\n    \"id\": \"25\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"rbercamapi@gmail.com\",\n      \"auth-token\": \"xTF8fnMDVJZYv1y-zMCQ\",\n      \"created-at\": \"2018-10-06T01:31:58.010Z\",\n      \"updated-at\": \"2018-10-12T11:25:28.411Z\"\n    }\n  }\n}\n\nto match schema \"login_service_schema\":\n\n{\n  \"description\": \"schema response login\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"type\": {\n          \"type\": \"string\"\n        },\n        \"attributes\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"email\": {\n              \"type\": \"string\"\n            },\n            \"auth-token\": {\n              \"type\": \"string\"\n            },\n            \"created-at\": {\n              \"type\": \"string\"\n            },\n            \"updated-at\": {\n              \"type\": \"string\"\n            }\n          }\n        }\n      }\n    }\n  }\n}\n (RSpec::Expectations::ExpectationNotMetError)\n./features/steps_definitions/02-tarefas_step.rb:3:in `\"que o cliente esteja logado na API\"'\nfeatures/specifications/02-tarefas.feature:6:in `Dado que o cliente esteja logado na API'",
+              "duration": 1016312504
             }
           }
         ]
@@ -350,56 +339,43 @@
             "name": "realizar a requisição para consultar tarefas",
             "line": 15,
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:16"
+              "location": "features/steps_definitions/02-tarefas_step.rb:17"
             },
             "result": {
-              "status": "passed",
-              "duration": 711342456
+              "status": "skipped"
             }
           },
           {
             "keyword": "Então ",
             "name": "o sistema retorna o código 200",
             "line": 16,
-            "output": [
-              "true"
-            ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:6"
             },
             "result": {
-              "status": "passed",
-              "duration": 165685
+              "status": "skipped"
             }
           },
           {
             "keyword": "E ",
             "name": "o corpo da resposta da tarefa",
             "line": 17,
-            "output": [
-              "{\"data\":{\"id\":\"68\",\"type\":\"tasks\",\"attributes\":{\"title\":\"wnxgy7m\",\"description\":\"g4vfsmvhw1gq4bi\",\"done\":true,\"deadline\":\"0010-11-18T10:43:49.000Z\",\"user-id\":25,\"created-at\":\"2018-10-11T13:43:50.989Z\",\"updated-at\":\"2018-10-11T13:43:50.989Z\",\"short-description\":\"g4vfsmvhw1gq4bi\",\"is-late\":true},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
-            ],
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:12"
+              "location": "features/steps_definitions/02-tarefas_step.rb:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 67637
+              "status": "skipped"
             }
           },
           {
             "keyword": "E ",
             "name": "ao final o cliente irá deslogar da API",
             "line": 18,
-            "output": [
-              "true"
-            ],
             "match": {
-              "location": "features/steps_definitions/02-tarefas_step.rb:20"
+              "location": "features/steps_definitions/02-tarefas_step.rb:21"
             },
             "result": {
-              "status": "passed",
-              "duration": 688645333
+              "status": "skipped"
             }
           }
         ]

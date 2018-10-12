@@ -1,5 +1,6 @@
 Dado("que o cliente esteja logado na API") do
     puts $payload = @login.post_login
+    expect($payload).to match_json_schema("login_service_schema")
     $token = $payload['data']['attributes']['auth-token']
     @tarefa = Tarefa.new(@body, $token)
 end
