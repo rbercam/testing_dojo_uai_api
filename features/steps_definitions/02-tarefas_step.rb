@@ -6,7 +6,7 @@ Dado("que o cliente esteja logado na API") do
 end
 
 Quando("realizar a requisição para cadastrar uma nova tarefa") do
-   $payload = @tarefa.post_task(@body)
+   $payload = @tarefa.post_task
    $id = $payload["data"]["id"]
 end
 

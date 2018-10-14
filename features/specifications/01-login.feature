@@ -1,6 +1,6 @@
 #language: pt
 @login
-Funcionalidade: Efetuar login na API
+Funcionalidade: Autenticação API
 
 Cenário: Efetuando login com sucesso
     Quando realizar a requisição para logar na API

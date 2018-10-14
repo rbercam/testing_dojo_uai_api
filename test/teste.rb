@@ -19,9 +19,9 @@ response = HTTParty.post('http://api-de-tarefas.herokuapp.com/contacts/',{:heade
 }, :body => @body})
 
 
-puts response
+pp response
 
-
+=begin
 response = HTTParty.get('http://api-de-tarefas.herokuapp.com/contacts/',:headers => {
     "Accept" => "application/vnd.tasksmanager.v2",
     "Content-Type"=> "application/json"
@@ -29,5 +29,5 @@ response = HTTParty.get('http://api-de-tarefas.herokuapp.com/contacts/',:headers
 
 id = response['data'].length
 puts response['data'][id - 1]
-
+=end
 

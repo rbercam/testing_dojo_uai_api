@@ -11,16 +11,25 @@ class Tarefa
     }
     end
 
-    def post_task(body)
+    def post_task
         self.class.post("/tasks",@options)
-    end
-
-    def get_all_task
-        self.class.get("/tasks",@options)
     end
 
     def get_task(id)
         self.class.get("/tasks/#{id}",@options)
+    end
+
+
+
+
+
+
+
+
+
+    
+    def get_all_task
+        self.class.get("/tasks",@options)
     end
 
     def put_task(body)
