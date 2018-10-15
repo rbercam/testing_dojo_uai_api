@@ -1,0 +1,409 @@
+[
+  {
+    "uri": "features/specifications/01-login.feature",
+    "id": "autenticação-api",
+    "keyword": "Funcionalidade",
+    "name": "Autenticação API",
+    "description": "",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@login",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "autenticação-api;efetuando-login-com-sucesso",
+        "keyword": "Cenário",
+        "name": "Efetuando login com sucesso",
+        "description": "",
+        "line": 5,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/01-login_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25272
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar a requisição para logar na API",
+            "line": 6,
+            "output": [
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"auuLN8PKyY4toixs5KCj\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:43.457Z\"}}}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 930954454
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o sistema retorna o código 200",
+            "line": 7,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 356163
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o token da url é gerado criando a sessão",
+            "line": 8,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 535045
+            }
+          }
+        ]
+      },
+      {
+        "id": "autenticação-api;efetuando-logout",
+        "keyword": "Cenário",
+        "name": "Efetuando logout",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/01-login_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24313
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar a requisição para fazer logout na API",
+            "line": 11,
+            "output": [
+              "#<HTTParty::Response:0x55e4e87806e0 parsed_response=nil, @response=#<Net::HTTPNoContent 204 No Content readbody=true>, @headers={\"server\"=>[\"Cowboy\"], \"date\"=>[\"Mon, 15 Oct 2018 12:50:43 GMT\"], \"content-length\"=>[\"0\"], \"connection\"=>[\"close\"], \"cache-control\"=>[\"no-cache\"], \"x-request-id\"=>[\"a97b92e1-996e-4c95-b68d-91c18bdaa5f3\"], \"x-runtime\"=>[\"0.038669\"], \"via\"=>[\"1.1 vegur\"]}>"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 635007828
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o sistema retorna o código 204",
+            "line": 12,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134371
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specifications/02-tarefas.feature",
+    "id": "manter-dados-de-tarefas",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de Tarefas",
+    "description": "",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@tarefas",
+        "line": 2
+      },
+      {
+        "name": "@login",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Login API",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/01-login_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70981
+            }
+          },
+          {
+            "match": {
+              "location": "features/hooks/02-tarefas_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194038
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que o cliente esteja logado na API",
+            "line": 6,
+            "output": [
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"M2-TiniNCVF5utEzqNYM\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:44.959Z\"}}}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 865845072
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-tarefas;criar-uma-tarefa",
+        "keyword": "Cenário",
+        "name": "Criar uma tarefa",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@tarefas",
+            "line": 2
+          },
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar a requisição para cadastrar uma nova tarefa",
+            "line": 9,
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648791849
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o sistema retorna o código 201",
+            "line": 10,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123741
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o corpo da resposta da tarefa",
+            "line": 11,
+            "output": [
+              "{\"data\":{\"id\":\"93\",\"type\":\"tasks\",\"attributes\":{\"title\":\"cgibvol\",\"description\":\"2qt5coypypw2hal\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-15T12:50:45.619Z\",\"updated-at\":\"2018-10-15T12:50:45.619Z\",\"short-description\":\"2qt5coypypw2hal\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75966
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "ao final o cliente irá deslogar da API",
+            "line": 12,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 711327613
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Login API",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/01-login_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52421
+            }
+          },
+          {
+            "match": {
+              "location": "features/hooks/02-tarefas_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131551
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que o cliente esteja logado na API",
+            "line": 6,
+            "output": [
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"WRJbMZux32QCiSwthNks\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:47.292Z\"}}}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 969101221
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-tarefas;listar-tarefa-por-id",
+        "keyword": "Cenário",
+        "name": "Listar Tarefa por id",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@tarefas",
+            "line": 2
+          },
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar a requisição para consultar tarefas",
+            "line": 15,
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 976125878
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o sistema retorna o código 200",
+            "line": 16,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/01-login_step.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66937
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o corpo da resposta da tarefa",
+            "line": 17,
+            "output": [
+              "{\"data\":{\"id\":\"93\",\"type\":\"tasks\",\"attributes\":{\"title\":\"cgibvol\",\"description\":\"2qt5coypypw2hal\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-15T12:50:45.619Z\",\"updated-at\":\"2018-10-15T12:50:45.619Z\",\"short-description\":\"2qt5coypypw2hal\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21184
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "ao final o cliente irá deslogar da API",
+            "line": 18,
+            "output": [
+              "true"
+            ],
+            "match": {
+              "location": "features/steps_definitions/02-tarefas_step.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 761539921
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
