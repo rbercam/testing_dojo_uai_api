@@ -7,9 +7,19 @@ CircleCI | [![CircleCI](https://circleci.com/gh/rbercam/testing_dojo_uai_api.svg
 ![TestingDojoUai](/img/tstdj.jpeg)
 ## Automação API com HTTParty com Integração contínua CircleCI ##
 
+## Pré-requisitos
+
+* Possuir ruby instalado **> 2.0.0**
+* https://www.ruby-lang.org/pt/downloads/
+
+## Instalando gem Bundler
+Para instalação da gem Bundler, rode o comando:
+```shell
+gem install bundler
+```
 
 ## 1)  Instalando dependências ##
-Para instalação das dependências do projeto rode o comando:
+Para instalação das dependências do projeto rode o comando na raiz do projeto:
 ```shell
 bundle install
 ```
