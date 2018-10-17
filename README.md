@@ -42,3 +42,5 @@ https://apidetarefas.docs.apiary.io/#reference/
 ### Link Apresentação ###
 
 [Apresentação](https://docs.google.com/presentation/d/1_0A6b3seyaI4EaxU9snhVebUhtRiRymRq6lrB4K_qUI/edit?usp=sharing)
+
+[Apresentação PDF](https://drive.google.com/file/d/1F3WqxMzVzDxxqupRnQwejsgK7gmSVNmf/view?usp=sharing)
