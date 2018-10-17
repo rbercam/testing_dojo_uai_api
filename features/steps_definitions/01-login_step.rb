@@ -1,6 +1,7 @@
 Quando("realizar a requisição para logar na API") do
     puts $payload = @login.post_login
     $token = $payload['data']['attributes']['auth-token']
+    expect($payload).to match_json_schema("01-login_service_schema")
 end
 
 Então("o sistema retorna o código {int}") do |status_code|
