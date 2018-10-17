@@ -33,7 +33,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25272
+              "duration": 29288
             }
           }
         ],
@@ -43,14 +43,14 @@
             "name": "realizar a requisição para logar na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"auuLN8PKyY4toixs5KCj\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:43.457Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"qYiuCb2VbfJaS-FT85oy\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-17T19:17:48.130Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 930954454
+              "duration": 19450042441
             }
           },
           {
@@ -65,7 +65,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 356163
+              "duration": 9864345
             }
           },
           {
@@ -80,7 +80,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 535045
+              "duration": 23924559
             }
           }
         ]
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24313
+              "duration": 36926
             }
           }
         ],
@@ -115,14 +115,14 @@
             "name": "realizar a requisição para fazer logout na API",
             "line": 11,
             "output": [
-              "#<HTTParty::Response:0x55e4e87806e0 parsed_response=nil, @response=#<Net::HTTPNoContent 204 No Content readbody=true>, @headers={\"server\"=>[\"Cowboy\"], \"date\"=>[\"Mon, 15 Oct 2018 12:50:43 GMT\"], \"content-length\"=>[\"0\"], \"connection\"=>[\"close\"], \"cache-control\"=>[\"no-cache\"], \"x-request-id\"=>[\"a97b92e1-996e-4c95-b68d-91c18bdaa5f3\"], \"x-runtime\"=>[\"0.038669\"], \"via\"=>[\"1.1 vegur\"]}>"
+              "#<HTTParty::Response:0x55654fbc6c40 parsed_response=nil, @response=#<Net::HTTPNoContent 204 No Content readbody=true>, @headers={\"server\"=>[\"Cowboy\"], \"date\"=>[\"Wed, 17 Oct 2018 19:17:48 GMT\"], \"content-length\"=>[\"0\"], \"connection\"=>[\"close\"], \"cache-control\"=>[\"no-cache\"], \"x-request-id\"=>[\"f6dfa0b8-d34d-4733-b84b-b60fd219544e\"], \"x-runtime\"=>[\"0.060847\"], \"via\"=>[\"1.1 vegur\"]}>"
             ],
             "match": {
               "location": "features/steps_definitions/01-login_step.rb:14"
             },
             "result": {
               "status": "passed",
-              "duration": 635007828
+              "duration": 672472107
             }
           },
           {
@@ -137,7 +137,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 134371
+              "duration": 145700
             }
           }
         ]
@@ -175,7 +175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 70981
+              "duration": 77403
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 194038
+              "duration": 214262
             }
           }
         ],
@@ -194,14 +194,14 @@
             "name": "que o cliente esteja logado na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"M2-TiniNCVF5utEzqNYM\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:44.959Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"WAoQGR4ynoh6YNyBN7qG\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-17T19:17:49.747Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 865845072
+              "duration": 877338437
             }
           }
         ]
@@ -233,7 +233,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 648791849
+              "duration": 703759926
             }
           },
           {
@@ -248,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 123741
+              "duration": 135664
             }
           },
           {
@@ -256,14 +256,14 @@
             "name": "o corpo da resposta da tarefa",
             "line": 11,
             "output": [
-              "{\"data\":{\"id\":\"93\",\"type\":\"tasks\",\"attributes\":{\"title\":\"cgibvol\",\"description\":\"2qt5coypypw2hal\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-15T12:50:45.619Z\",\"updated-at\":\"2018-10-15T12:50:45.619Z\",\"short-description\":\"2qt5coypypw2hal\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
+              "{\"data\":{\"id\":\"99\",\"type\":\"tasks\",\"attributes\":{\"title\":\"0nmdf9t\",\"description\":\"gvmzv1zux1io467\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-17T19:17:50.441Z\",\"updated-at\":\"2018-10-17T19:17:50.441Z\",\"short-description\":\"gvmzv1zux1io467\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:13"
             },
             "result": {
               "status": "passed",
-              "duration": 75966
+              "duration": 53202
             }
           },
           {
@@ -278,7 +278,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 711327613
+              "duration": 748907435
             }
           }
         ]
@@ -296,7 +296,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52421
+              "duration": 50110
             }
           },
           {
@@ -305,7 +305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 131551
+              "duration": 71458
             }
           }
         ],
@@ -315,14 +315,14 @@
             "name": "que o cliente esteja logado na API",
             "line": 6,
             "output": [
-              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"WRJbMZux32QCiSwthNks\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-15T12:50:47.292Z\"}}}"
+              "{\"data\":{\"id\":\"25\",\"type\":\"users\",\"attributes\":{\"email\":\"rbercamapi@gmail.com\",\"auth-token\":\"_rsNtx53-gY-ZE7QnZTv\",\"created-at\":\"2018-10-06T01:31:58.010Z\",\"updated-at\":\"2018-10-17T19:17:52.265Z\"}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 969101221
+              "duration": 1120891735
             }
           }
         ]
@@ -354,7 +354,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 976125878
+              "duration": 670824785
             }
           },
           {
@@ -369,7 +369,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66937
+              "duration": 142998
             }
           },
           {
@@ -377,14 +377,14 @@
             "name": "o corpo da resposta da tarefa",
             "line": 17,
             "output": [
-              "{\"data\":{\"id\":\"93\",\"type\":\"tasks\",\"attributes\":{\"title\":\"cgibvol\",\"description\":\"2qt5coypypw2hal\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-15T12:50:45.619Z\",\"updated-at\":\"2018-10-15T12:50:45.619Z\",\"short-description\":\"2qt5coypypw2hal\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
+              "{\"data\":{\"id\":\"99\",\"type\":\"tasks\",\"attributes\":{\"title\":\"0nmdf9t\",\"description\":\"gvmzv1zux1io467\",\"done\":true,\"deadline\":null,\"user-id\":25,\"created-at\":\"2018-10-17T19:17:50.441Z\",\"updated-at\":\"2018-10-17T19:17:50.441Z\",\"short-description\":\"gvmzv1zux1io467\",\"is-late\":null},\"relationships\":{\"user\":{\"data\":{\"id\":\"25\",\"type\":\"users\"}}}}}"
             ],
             "match": {
               "location": "features/steps_definitions/02-tarefas_step.rb:13"
             },
             "result": {
               "status": "passed",
-              "duration": 21184
+              "duration": 67039
             }
           },
           {
@@ -399,7 +399,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 761539921
+              "duration": 649930812
             }
           }
         ]

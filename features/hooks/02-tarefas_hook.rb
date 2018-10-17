@@ -1,5 +1,4 @@
 Before '@tarefas' do 
-    @headers = {}
     today_time = Time.now
     body = {
         "task": {
